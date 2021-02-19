@@ -3,9 +3,9 @@ title: "Module2-Rmarkdown Document 1"
 author: "Heather Copley"
 date: "2/19/2021"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -86,10 +86,23 @@ plot(pressure)
 
 ## Insert Tables 
 
-```{r}
+```{r, results = 'asis'}
 knitr::kable(head(cars), caption = "Top 6 Rows of Cars Dataset")
 ```
 
 ## Insert an equation
 
 $$ Y =   \beta_0 + \beta_1x_1 $$
+## Insert Images
+
+Here is an image inserted
+
+![sunstar](sunstar.png)
+
+## Insert text with some footnotes
+
+Here is a footnote reference [^1] and another [^long note]
+
+Here is an inline footnote ^[inline footnotes are easier to write]
+
+[^1]: Here is the footnote
